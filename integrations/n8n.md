@@ -136,9 +136,17 @@ Save the credential.
 
 Wire up: **When chat message received → AI Agent**, with the **OpenAI Chat Model**
 as the agent's Chat Model and **Simple Memory** attached. Send a test chat — a
-successful model response confirms the full path (n8n → AIGW → Bedrock).
+successful model response confirms the full path (n8n → AIGW → provider).
 
 ![n8n workflow returning a live response](images/n8n-workflow.png)
+
+### Import the example workflow
+
+A ready-made version of this workflow is included:
+[`n8n-workflow.example.json`](n8n-workflow.example.json). In n8n, use
+**Import from File** and select it. It contains no secrets — on import, open the
+**OpenAI Chat Model** node and point its credential at the OpenAI account you
+configured in Step 3.
 
 ---
 
