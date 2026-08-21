@@ -32,7 +32,7 @@ Two values get you started — ask your AIGW administrator for both:
 Throughout the snippets below, replace the placeholders:
 
 - `YOUR_API_KEY` — your AIGW / Portkey key
-- `YOUR_PROVIDER_SLUG` — e.g. `@aws-claude-bedrock-v2`
+- `YOUR_PROVIDER_SLUG` — e.g. `@example-bedrock`
 - `YOUR_MODEL_ID` — e.g. `us.anthropic.claude-opus-4-5-20251101-v1:0`
 
 ## Quick start
@@ -109,5 +109,7 @@ grouped by whichever dimension you tagged.
 
 - **[Claude integration →](integrations/claude.md)** — Claude Desktop and Claude
   Code, step by step.
+- **[n8n integration →](integrations/n8n.md)** — n8n's OpenAI node → AIGW →
+  Bedrock, using a routing config attached to the API key.
 
 _More clients will be added over time._
