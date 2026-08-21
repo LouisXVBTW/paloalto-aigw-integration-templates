@@ -69,13 +69,13 @@ Example value:
 }
 ```
 
-![Create Configuration with override_params](images/n8n-config-create.png)
+![Configuration list with the saved config](images/n8n-config-list.png)
 
 Click **Save Configuration**. The config appears in the list with a generated
 **Config ID** (e.g. `pc-xxxxxxxx`, name `n8n-config`) — you'll select it by
 name in the next step.
 
-![Configuration list with the saved config](images/n8n-config-list.png)
+![Create Configuration with override_params](images/n8n-config-create.png)
 
 > **Why:** this makes the gateway inject the provider and model automatically, so
 > the client never has to send `x-portkey-provider`.
