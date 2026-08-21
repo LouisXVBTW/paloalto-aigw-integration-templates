@@ -72,6 +72,50 @@ and add your model manually.
 The same three placeholders apply: `YOUR_API_KEY`, `YOUR_PROVIDER_SLUG`,
 `YOUR_MODEL_ID`.
 
+### Quick option — import a config file
+
+If you'd rather not click through every field, the whole third-party inference
+config can be expressed as JSON and imported. Copy
+[`claude-desktop-config.example.json`](claude-desktop-config.example.json),
+replace the three placeholders, and import it (you still need Developer Mode
+enabled — see Step 1).
+
+```json
+{
+  "$schemaVersion": 2,
+  "inference": {
+    "provider": "gateway",
+    "baseUrl": "https://aigw.portkey.ai",
+    "customHeaders": {
+      "x-portkey-api-key": "YOUR_API_KEY",
+      "x-portkey-provider": "YOUR_PROVIDER_SLUG"
+    },
+    "credential": {
+      "kind": "static",
+      "apiKey": "YOUR_API_KEY"
+    }
+  },
+  "models": {
+    "discoveryEnabled": false,
+    "list": [
+      {
+        "name": "YOUR_MODEL_ID",
+        "labelOverride": "claude opus 4-5",
+        "anthropicFamilyTier": "opus"
+      }
+    ]
+  }
+}
+```
+
+These JSON keys map 1:1 to the UI fields described below: `baseUrl` = Gateway base
+URL, `customHeaders` = Custom inference headers, `credential.apiKey` = Gateway API
+key, `models.discoveryEnabled: false` = Model discovery off, and each `list` entry
+= a manual model (`name` = Model ID, `labelOverride` = Display name,
+`anthropicFamilyTier` = Tier alias).
+
+The rest of this section walks through the same settings via the UI.
+
 ### Step 1 — Enable Developer Mode
 
 The third-party inference settings only appear once Developer Mode is on.
