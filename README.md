@@ -105,6 +105,18 @@ curl https://aigw.portkey.ai/v1/chat/completions \
 Then open the gateway logs and filter by `_user`, `app`, or `env` to see requests
 grouped by whichever dimension you tagged.
 
+## Provider setup
+
+Provision an upstream provider in the AIGW so a slug routes to it. Do this once per
+provider, then point any client below at it.
+
+- **[Google Vertex AI →](providers/vertex.md)** — GCP service account + AIGW
+  integration, step by step.
+- **[Amazon Bedrock →](providers/bedrock.md)** — AWS access key + AIGW integration,
+  step by step.
+
+_Azure AI Foundry to follow._
+
 ## Integrations
 
 - **[Claude integration →](integrations/claude.md)** — Claude Desktop and Claude
